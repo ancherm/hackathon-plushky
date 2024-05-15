@@ -1,0 +1,158 @@
+.messagebox-navbar-container {
+    border-radius: 0.3rem;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+    background: white;
+    width: 100%;
+}
+
+.toggle {
+    height: 65px;
+}
+
+/* ##################################### */
+/* friends-container */
+
+.messagebox-navbar-friend-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: white;
+    border-radius: 5px;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: #40a3f4;
+    border: 1px solid #fff;
+}
+
+.messagebox-navbar-friend-container:hover {
+    background: #40a3f4;
+    color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0 0 14px 1px rgba(0, 0, 0, .3);
+}
+
+.messagebox-navbar-friend-image {
+    width: 2.9rem;
+    /* width: 12%; */
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.messagebox-navbar-friend-image:before {
+    display: block;
+    content: '';
+    padding-top: 100%;
+}
+
+.messagebox-navbar-friend-image img {
+    display: block;
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.messagebox-navbar-friend-image img.l {
+    display: block;
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    width: auto;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.messagebox-navbar-username-container {
+    margin: 0 1rem;
+    width: 100%
+}
+
+.messagebox-navbar-username-container:hover{
+    color: white;
+}
+
+.messagebox-navbar-username {
+    font-weight: bold;
+}
+
+.message-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.message-navbar-time {
+    color: rgb(192, 192, 192);
+}
+
+.message-navbar-time:hover {
+    color: inherit;
+}
+
+.message-navbar-content {
+    word-break: break-all;
+}
+
+.message-navbar-content:hover {
+    color: white;
+}
+
+/* ##################################### */
+/* Dropdown- Header */
+
+.dropdown-messagebox-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: white;
+    padding: 0.85rem 1rem;
+    cursor: pointer;
+    box-shadow: inset 0px -25px 5px -23px rgba(0, 0, 0, 0.3);
+    z-index: 20;
+    border-radius: 5px;
+} 
+
+.dropdown-messagebox-chat-icon {
+    position: relative;
+    overflow: hidden;
+}
+
+.dropdown-messagebox-chat-icon:before {
+    display: block;
+    content: '';
+    width: 35px;
+    height: 35px;
+    background: rgb(224, 224, 224);
+    border-radius: 50%;
+}
+
+.dropdown-messagebox-chat-icon i {
+    background: rgb(224, 224, 224);
+    color: white;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.dropdown-chat-title {
+    margin-bottom: 0.2rem;
+    padding: 0 1rem;
+}
+
+.messagebox-navbar-friend-container:hover {
+    color: #fff;
+}

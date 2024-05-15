@@ -1,0 +1,21 @@
+.jumbo-wrapper {
+    background-color: #E8F2FF !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+    background-blend-mode: color;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1300px) {
+    .start-page-margin {
+        margin-top: 8rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .start-page-margin {
+        margin-top: 5rem;
+        width: 100%;
+    }
+}

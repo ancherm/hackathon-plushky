@@ -1,0 +1,60 @@
+version: '3.7'
+
+services:
+  app-server:
+    build:
+      context: Server
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    restart: always
+    depends_on: 
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/social_network?useSSL=false&createDatabaseIfNotExist=true&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root 
+
+      CLOUDINARY_CLOUD_NAME: <enter_your_cloud_name>
+      CLOUDINARY_API_KEY: <enter_your_api_key>
+      CLOUDINARY_API_SECRET: <enter_your_api_secret>
+
+    networks:
+      - backend
+      - frontend
+
+  app-client:
+    build:
+      context: Client
+      dockerfile: Dockerfile
+      args:
+        REACT_APP_API_BASE_URL: http://127.0.0.1:8000
+    ports:
+      - "9090:80"
+    restart: always
+    depends_on:
+      - app-server
+    networks:
+      - frontend  
+
+  db:
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_DATABASE: social_network
+      MYSQL_USER: db_user
+      MYSQL_PASSWORD: klSocialNetwork
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - backend  
+  
+volumes:
+  db-data:
+
+networks:
+  backend:
+  frontend:    
