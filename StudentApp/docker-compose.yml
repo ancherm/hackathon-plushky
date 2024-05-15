@@ -13,11 +13,10 @@ services:
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/social_network?useSSL=false&createDatabaseIfNotExist=true&serverTimezone=UTC
       SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: root 
+      SPRING_DATASOURCE_PASSWORD: root
 
-      CLOUDINARY_CLOUD_NAME: <enter_your_cloud_name>
-      CLOUDINARY_API_KEY: <enter_your_api_key>
-      CLOUDINARY_API_SECRET: <enter_your_api_secret>
+      CLOUDINARY_CLOUD_NAME: 1c_storage
+      CLOUDINARY_API_KEY: 1c-key
 
     networks:
       - backend
